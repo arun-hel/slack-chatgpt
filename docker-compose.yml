@@ -5,9 +5,7 @@ services:
     image: slack-chat-gpt:v1
     container_name: slack-chat-gpt
     restart: always
-    environment:
-      - SIGNING_SECRET=57176f5a5dcab99d4f1ca18df95d3578
-      - BOT_TOKEN=xoxb-1434385517620-4890738103122-H07mxksaEJbn5cAdciJp4BB5
-      - OPENAI_API_KEY=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
+    env_file:
+      - .env
     ports:
       - 4041:3000
